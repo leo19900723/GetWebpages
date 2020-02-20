@@ -717,6 +717,7 @@ def main():
     print(shuffleCheck_BF(strA, strB, strTarget))
     print(shuffleCheck_DP(strA, strB, strTarget))
     print2D(prettyPrint(prettyWords, 38))
+    print("TEST GIT")
 
 
 if __name__ == "__main__":
