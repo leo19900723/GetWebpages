@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fba207bc-c380-4ca2-9b3b-e67b2901f9ba" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>output_url_file</find>
+      <find>__parsedOutPutHeaders</find>
+      <find>username</find>
+      <find>Webself.__driverWait</find>
+      <find>saved_url_dict</find>
+      <find>time_string</find>
+      <find>recorded_articles_counter</find>
+      <find>row_counter</find>
+      <find>getPttParsedArticles</find>
+      <find>getPttTargetTitles</find>
+      <find>NonTarget</find>
+      <find>len(self.__commentTableHeader) - 1</find>
+      <find>len(self.__outputDataHeaderList)</find>
+      <find>__checkBoxCategoriesTableHeader</find>
+      <find>targetFile</find>
+      <find>lines</find>
+      <find>__save_result</find>
+      <find>save_btn_handler</find>
+      <find>__format_header_string</find>
+      <find>checkbox_handler</find>
+      <find>load_btn_handler</find>
+      <find>radio_btn_handler</find>
+      <find>reset_content</find>
+      <find>get_checkbox_widget</find>
+      <find>get_checkbox</find>
+      <find>tempOutputData</find>
+      <find>__label</find>
+      <find>radionBtnCategoriesTextList</find>
+      <find>checkBoxCategoriesTableHeaderList</find>
+      <find>supCategoriesTextList</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>output_url_file</replace>
+      <replace>title_url_file</replace>
+      <replace>parsedOutPutHeadersList</replace>
+      <replace>self.__userName</replace>
+      <replace>WebDriverWait</replace>
+      <replace>savedUrlDict</replace>
+      <replace>timeString</replace>
+      <replace>recordedArticlesCounter</replace>
+      <replace>rowCounter</replace>
+      <replace>getPttParsedArticle</replace>
+      <replace>getPttTitleUrl</replace>
+      <replace>len(self.__outputDataHeaderList)</replace>
+      <replace>len(self.__outputDataHeaderDict)</replace>
+      <replace>__checkBoxCategoriesTableHeaderList</replace>
+      <replace>sourceFile</replace>
+      <replace>sourceFileLines</replace>
+      <replace>__saveCore</replace>
+      <replace>saveBtnHandler</replace>
+      <replace>__formatTableHeaderString</replace>
+      <replace>checkBoxHandler</replace>
+      <replace>loadBtnHandler</replace>
+      <replace>radioBtnHandler</replace>
+      <replace>resetContent</replace>
+      <replace>getCheckboxWidget</replace>
+      <replace>getCheckbox</replace>
+      <replace>tempOutputDataDict</replace>
+      <replace>__commentTableSupHeader</replace>
+      <replace>supCategoriesTextList</replace>
+      <replace>subCategoriesTableHeaderList</replace>
+      <replace>supCategoriesTableHeaderList</replace>
+    </replaceStrings>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="GetWebpages/invalid/Python facet" />
+    </ignored-facets>
+  </component>
+  <component name="ProjectId" id="1OUYY6eWcbtJ1kwo85hgRVsKT3n" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\leo19\OneDrive\個人文件\求學生涯\2海洋大學\程式設計\Python\GetWebpages\Libs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.TEST">
+    <configuration name="ArticlePaser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GetWebpages" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Libs/ArticlePaser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DataQuery_PTT" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GetWebpages" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Libs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataQuery_PTT.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="NotingUserInterface" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GetWebpages" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\leo19\Anaconda3\envs\GetWebpages\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NotingUserInterface.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PttArticleTitlesQuery_Console" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GetWebpages" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Libs/PttArticleTitlesQuery_Console.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TEST" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GetWebpages" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\leo19\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TEST.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="GetWebpages" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\leo19\Anaconda3\envs\GetWebpages\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.ArticlePaser" />
+      <item itemvalue="Python.DataQuery_PTT" />
+      <item itemvalue="Python.NotingUserInterface" />
+      <item itemvalue="Python.PttArticleTitlesQuery_Console" />
+      <item itemvalue="Python.TEST" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.TEST" />
+        <item itemvalue="Python.NotingUserInterface" />
+        <item itemvalue="Python.DataQuery_PTT" />
+        <item itemvalue="Python.ArticlePaser" />
+        <item itemvalue="Python.PttArticleTitlesQuery_Console" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fba207bc-c380-4ca2-9b3b-e67b2901f9ba" name="Default Changelist" comment="" />
+      <created>1555061936903</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555061936903</updated>
+      <workItem from="1564564664822" duration="1846000" />
+      <workItem from="1565855622359" duration="1885000" />
+      <workItem from="1567958992252" duration="641000" />
+      <workItem from="1567960166693" duration="594000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#Inspections" timestamp="1579245637741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1579245637741" />
+    <state width="1899" height="198" key="GridCell.Tab.0.bottom" timestamp="1579254969802">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="198" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579254969802" />
+    <state width="1899" height="198" key="GridCell.Tab.0.center" timestamp="1579254969801">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="198" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579254969801" />
+    <state width="1899" height="198" key="GridCell.Tab.0.left" timestamp="1579254969801">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="198" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579254969801" />
+    <state width="1899" height="198" key="GridCell.Tab.0.right" timestamp="1579254969801">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="198" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579254969801" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1579245652467">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579245652467" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="60 - key" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
