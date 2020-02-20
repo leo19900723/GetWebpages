@@ -709,8 +709,6 @@ def main():
     alignmentStrB = "mean"
 
     print2D(floydWarshall(teacherSampleGraph))
-
-    '''
     print(mergeSort3(d))
     print(bellmanFord(graphBellmanFord, 1, 0))
     print2D(stringAlignment(alignmentStrA, alignmentStrB))
@@ -719,7 +717,6 @@ def main():
     print(shuffleCheck_BF(strA, strB, strTarget))
     print(shuffleCheck_DP(strA, strB, strTarget))
     print2D(prettyPrint(prettyWords, 38))
-    '''
 
 
 if __name__ == "__main__":
