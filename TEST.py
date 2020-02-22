@@ -114,89 +114,6 @@ class Solution:
         else:
             return None
 
-    def updateBoard(self, board, click):
-        print(click, "-----------")
-
-        for row in board:
-            print(row)
-
-        if board[click[0]][click[1]] == "M":
-            board[click[0]][click[1]] = "X"
-        elif board[click[0]][click[1]] == "E":
-            mineCounter = 0
-
-            mineCounter += 1 if click[0] > 0 and board[click[0] - 1][click[1]] == "M" else 0
-            mineCounter += 1 if click[0] > 0 and click[1] < len(board[0]) - 1 and board[click[0] - 1][
-                click[1] + 1] == "M" else 0
-            mineCounter += 1 if click[1] < len(board[0]) - 1 and board[click[0]][click[1] + 1] == "M" else 0
-            mineCounter += 1 if click[0] < len(board) - 1 and click[1] < len(board[0]) - 1 and board[click[0] + 1][
-                click[1] + 1] == "M" else 0
-            mineCounter += 1 if click[0] < len(board) - 1 and board[click[0] + 1][click[1]] == "M" else 0
-            mineCounter += 1 if click[0] < len(board) - 1 and click[1] > 0 and board[click[0] + 1][
-                click[1] - 1] == "M" else 0
-            mineCounter += 1 if click[1] > 0 and board[click[0]][click[1] - 1] == "M" else 0
-            mineCounter += 1 if click[0] > 0 and click[1] > 0 and board[click[0] - 1][click[1] - 1] == "M" else 0
-
-            if mineCounter:
-                board[click[0]][click[1]] = str(mineCounter)
-            else:
-                board[click[0]][click[1]] = " "
-                if click[0] > 0:
-                    self.updateBoard(board, [click[0] - 1, click[1]])
-                if click[0] > 0 and click[1] < len(board[0]) - 1:
-                    self.updateBoard(board, [click[0] - 1, click[1] + 1])
-                if click[1] < len(board[0]) - 1:
-                    self.updateBoard(board, [click[0], click[1] + 1])
-                if click[0] < len(board) - 1 and click[1] < len(board[0]) - 1:
-                    self.updateBoard(board, [click[0] + 1, click[1] + 1])
-                if click[0] < len(board) - 1:
-                    self.updateBoard(board, [click[0] + 1, click[1]])
-                if click[0] < len(board) - 1 and click[1] > 0:
-                    self.updateBoard(board, [click[0] + 1, click[1] - 1])
-                if click[1] > 0:
-                    self.updateBoard(board, [click[0], click[1] - 1])
-                if click[0] > 0 and click[1] > 0:
-                    self.updateBoard(board, [click[0] - 1, click[1] - 1])
-
-        return board
-
-    def compute_number_score(self, number):
-        ans = 4 if not number % 3 else 0
-        number = str(number)
-        c2PointerLeft, c2PointerRight = None, None
-        powPointer, powLength = 0, 1
-
-        for charIndex in range(len(number)):
-            if number[charIndex] == "7":
-                ans += 5
-
-            if number[charIndex] == "2":
-                if c2PointerLeft is None:
-                    c2PointerLeft = charIndex
-                else:
-                    c2PointerRight = charIndex
-            else:
-                if c2PointerLeft and c2PointerRight:
-                    ans += 6 * (c2PointerRight - c2PointerLeft)
-                c2PointerLeft, c2PointerRight = None, None
-
-            if int(number[powPointer]) - int(number[charIndex]) == 1:
-                powLength += 1
-            elif charIndex:
-                ans += powLength ** 2
-                powLength = 1
-
-            powPointer = charIndex
-
-            if not int(number[charIndex]) % 2:
-                ans += 3
-
-        if c2PointerLeft is not None and c2PointerRight is not None:
-            ans += 6 * (c2PointerRight - c2PointerLeft)
-        ans += powLength ** 2
-
-        return ans
-
     def lock_use_analyzer(self, task):
         stack = []
 
@@ -209,140 +126,6 @@ class Solution:
                 else:
                     stack.pop()
         return 0 if not stack else len(task) + 1
-
-    def countSubstrings(self, s: str) -> int:
-        ans = 0
-
-        for index in range(len(s)):
-
-            leftPointer = index - 1
-            rightPointer = index + 1
-
-            while leftPointer >= 0 and rightPointer < len(s) and s[leftPointer] == s[rightPointer]:
-                ans += 1
-                leftPointer -= 1
-                rightPointer += 1
-
-            if index < len(s) - 1 and s[index] == s[index + 1]:
-                ans += 1
-                leftPointer = index - 1
-                rightPointer = index + 2
-                while leftPointer >= 0 and rightPointer < len(s) and s[leftPointer] == s[rightPointer]:
-                    ans += 1
-                    leftPointer -= 1
-                    rightPointer += 1
-
-        return ans + len(s)
-
-    def balancedStringSplit(self, s: str) -> int:
-        stack = []
-        ans = 0
-        index = 0
-
-        while index < len(s):
-            print(stack)
-            if s[index] == "R":
-                stack.append(s[index])
-                index += 1
-            else:
-                popLen = 0
-                while index < len(s) and s[index] == "L":
-                    popLen += 1
-                    index += 1
-                stack = stack[:-popLen]
-                ans += 1
-
-        return ans
-
-    def sumLessThanInput(self, array, x):
-        array = sorted(array)
-        leftIndex, rightIndex = 0, len(array) - 1
-        ans = 0
-
-        while rightIndex > leftIndex:
-            if array[rightIndex] + array[leftIndex] > x:
-                rightIndex -= 1
-            elif array[rightIndex] + array[leftIndex] <= x:
-                ans += rightIndex - leftIndex
-                leftIndex += 1
-
-        return ans
-
-    def ratInTheMaze(self, maze, startX, startY, endX, endY):
-        ans = []
-
-        def backTracking(tmpAns, x, y):
-            nonlocal ans, maze, endX, endY
-            if 0 <= x < len(maze) and 0 <= y < len(maze[-1]) and maze[x][y] and not tmpAns[x][y]:
-                tmpAns[x][y] = 1
-                if x == endX and y == endY:
-                    ans.append(copy.deepcopy(tmpAns))
-                backTracking(tmpAns, x - 1, y)
-                backTracking(tmpAns, x, y + 1)
-                backTracking(tmpAns, x + 1, y)
-                backTracking(tmpAns, x, y - 1)
-
-                tmpAns[x][y] = 0
-
-        backTracking([[0 for _ in range(len(maze[row]))] for row in range(len(maze))], startX, startY)
-
-        return ans
-
-    def treasureIslandI(self, maze, startX, startY):
-        ans = []
-        ansStep = math.inf
-
-        def backTracking(level, tmpAns, x, y):
-            nonlocal ans, ansStep, maze
-
-            if 0 <= x < len(maze) and 0 <= y < len(maze[-1]) and (maze[x][y] == "O" or maze[x][y] == "X"):
-                maze[x][y] = "V" if maze[x][y] == "O" else "X"
-                tmpAns.append([x, y])
-
-                if maze[x][y] == "X" and level < ansStep:
-                    ans = tmpAns.copy()
-                    ansStep = level
-
-                backTracking(level + 1, tmpAns, x - 1, y)
-                backTracking(level + 1, tmpAns, x, y + 1)
-                backTracking(level + 1, tmpAns, x + 1, y)
-                backTracking(level + 1, tmpAns, x, y - 1)
-
-                maze[x][y] = "O" if maze[x][y] == "V" else "X"
-                del tmpAns[-1]
-
-        backTracking(0, [], startX, startY)
-
-        return ans
-
-    def moviesOnFlight(self, movie_duration, d):
-        movie_duration = sorted(movie_duration)
-        target = d - 30
-        ans = [0, 0]
-
-        for index in range(len(movie_duration)):
-            if movie_duration[index] <= target:
-                startIndex = index + 1
-                endIndex = len(movie_duration) - 1
-
-                while startIndex <= endIndex:
-                    midIndex = (startIndex + endIndex) // 2
-                    if (movie_duration[midIndex] + movie_duration[index]) > target >= (
-                            movie_duration[midIndex - 1] + movie_duration[index]) and midIndex - 1 != index:
-                        if (movie_duration[midIndex - 1] + movie_duration[index]) > ans[0] + ans[1]:
-                            ans = [movie_duration[midIndex - 1], movie_duration[index]]
-                            break
-                    elif (movie_duration[midIndex - 1] + movie_duration[index]) <= target:
-                        startIndex = midIndex + 1
-                    else:
-                        endIndex = midIndex - 1
-            else:
-                break
-
-        return ans
-
-    def kNearestPostOffices(self, myPlace, postOffices, k):
-        return sorted(postOffices, key=lambda x: abs(x[0] - myPlace[0]) ** 2 + abs(x[1] - myPlace[1]) ** 2)[:k]
 
 
 class Member(object):
@@ -467,48 +250,6 @@ def buyingStrategy(D_demandList, C_inventoryFeePerUnit, K_purchaseFee, S_stockLi
                 dp[monthIndex][stockIndex] = min(dp[monthIndex - 1][D_demandList[monthIndex] + stockIndex] if D_demandList[monthIndex] + stockIndex <= S_stockLimitation else math.inf, dp[monthIndex - 1][0] + C_inventoryFeePerUnit * stockIndex + (K_purchaseFee if D_demandList[monthIndex] else 0))
 
     return dp[-1][0]
-
-
-def merge(inputA, inputB):
-    ans = []
-    indexA, indexB = 0, 0
-
-    while indexA < len(inputA) and indexB < len(inputB):
-        if inputA[indexA] < inputB[indexB]:
-            ans.append(inputA[indexA])
-            indexA += 1
-        else:
-            ans.append(inputB[indexB])
-            indexB += 1
-
-    if indexA < len(inputA):  # Append remained
-        ans += inputA[indexA:]
-    else:
-        ans += inputB[indexB:]
-    return ans
-
-
-def mergeSort3(input):
-    if len(input) > 2:
-        A = mergeSort3(input[:len(input) // 3])
-        B = mergeSort3(input[len(input) // 3:2 * len(input) // 3])
-        C = mergeSort3(input[2 * len(input) // 3:])
-
-        return merge(A, merge(B, C))
-    elif len(input) == 2:
-        return input if input[0] < input[1] else input[::-1]
-    else:
-        return input
-
-
-def mergeSort(input):
-    if len(input) > 1:
-        slice1 = mergeSort(input[:len(input) // 2])
-        slice2 = mergeSort(input[len(input) // 2:])
-
-        return merge(slice1, slice2)
-    else:
-        return input
 
 
 def knapsackProblem(S, W):
@@ -640,7 +381,6 @@ def bellmanFord(graph, startPoint, destinationPoint):
     for level in range(1, len(dp)):
         for point in range(len(dp[level])):
             dp[level][point] = min(dp[level - 1][point], min([dp[level - 1][newPoint] + graph[point][newPoint] for newPoint in range(len(dp[level]))]))
-        print2D(dp)
 
     return dp[-1][startPoint]
 
@@ -709,7 +449,6 @@ def main():
     alignmentStrB = "mean"
 
     print2D(floydWarshall(teacherSampleGraph))
-    print(mergeSort3(d))
     print(bellmanFord(graphBellmanFord, 1, 0))
     print2D(stringAlignment(alignmentStrA, alignmentStrB))
     print(quickSort(d, 0, len(d)))
