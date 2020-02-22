@@ -450,7 +450,6 @@ def main():
     alignmentStrB = "mean"
 
     print2D(floydWarshall(teacherSampleGraph))
-    print(mergeSort3(d))
     print(bellmanFord(graphBellmanFord, 1, 0))
     print2D(stringAlignment(alignmentStrA, alignmentStrB))
     print(quickSort(d, 0, len(d)))
