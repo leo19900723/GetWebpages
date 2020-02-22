@@ -127,6 +127,23 @@ class Solution:
                     stack.pop()
         return 0 if not stack else len(task) + 1
 
+    def matrixScore(self, A):
+        colScore = [sum(col) for col in zip(*A)]
+
+        for rowIndex in range(len(A)):
+            if not A[rowIndex][0]:
+                for colIndex in range(len(A[rowIndex])):
+                    colScore[colIndex] += 1 if not A[rowIndex][colIndex] else -1
+                    A[rowIndex][colIndex] = 1 if not A[rowIndex][colIndex] else 0
+
+        for colIndex in range(len(colScore)):
+            if colScore[colIndex] < len(A) / 2:
+                for rowIndex in range(len(A)):
+                    colScore[colIndex] += 1 if not A[rowIndex][colIndex] else -1
+                    A[rowIndex][colIndex] = 1 if not A[rowIndex][colIndex] else 0
+
+        return sum([int("".join(map(str, num)), 2) for num in A])
+
 
 class Member(object):
 
@@ -407,7 +424,9 @@ def stringAlignment(strA, strB):
 
     return dp
 
+
 def main():
+    test = Solution()
     strA = list("aabcc")
     strB = list("dbbca")
     strTarget = list("aadbbbaccc")
@@ -421,6 +440,9 @@ def main():
     c = 1
     k = 5
     s = 10
+
+    graphFlip = [[0,0],[0,1],[1,1],[0,1],[1,1],[0,0],[1,1],[0,0]]
+
 
     graphFloydWarshall = [
         [0, 8, 3, 1, math.inf],
@@ -449,6 +471,9 @@ def main():
     alignmentStrA = "name"
     alignmentStrB = "mean"
 
+    print(test.matrixScore(graphFlip))
+
+    '''
     print2D(floydWarshall(teacherSampleGraph))
     print(bellmanFord(graphBellmanFord, 1, 0))
     print2D(stringAlignment(alignmentStrA, alignmentStrB))
@@ -457,6 +482,7 @@ def main():
     print(shuffleCheck_BF(strA, strB, strTarget))
     print(shuffleCheck_DP(strA, strB, strTarget))
     print2D(prettyPrint(prettyWords, 38))
+    '''
 
 
 if __name__ == "__main__":
