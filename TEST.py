@@ -252,48 +252,6 @@ def buyingStrategy(D_demandList, C_inventoryFeePerUnit, K_purchaseFee, S_stockLi
     return dp[-1][0]
 
 
-def merge(inputA, inputB):
-    ans = []
-    indexA, indexB = 0, 0
-
-    while indexA < len(inputA) and indexB < len(inputB):
-        if inputA[indexA] < inputB[indexB]:
-            ans.append(inputA[indexA])
-            indexA += 1
-        else:
-            ans.append(inputB[indexB])
-            indexB += 1
-
-    if indexA < len(inputA):  # Append remained
-        ans += inputA[indexA:]
-    else:
-        ans += inputB[indexB:]
-    return ans
-
-
-def mergeSort3(input):
-    if len(input) > 2:
-        A = mergeSort3(input[:len(input) // 3])
-        B = mergeSort3(input[len(input) // 3:2 * len(input) // 3])
-        C = mergeSort3(input[2 * len(input) // 3:])
-
-        return merge(A, merge(B, C))
-    elif len(input) == 2:
-        return input if input[0] < input[1] else input[::-1]
-    else:
-        return input
-
-
-def mergeSort(input):
-    if len(input) > 1:
-        slice1 = mergeSort(input[:len(input) // 2])
-        slice2 = mergeSort(input[len(input) // 2:])
-
-        return merge(slice1, slice2)
-    else:
-        return input
-
-
 def knapsackProblem(S, W):
     dp = []
 
