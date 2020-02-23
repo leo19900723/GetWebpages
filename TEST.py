@@ -426,7 +426,6 @@ def stringAlignment(strA, strB):
 
 
 def main():
-    test = Solution()
     strA = list("aabcc")
     strB = list("dbbca")
     strTarget = list("aadbbbaccc")
@@ -440,9 +439,6 @@ def main():
     c = 1
     k = 5
     s = 10
-
-    graphFlip = [[0,0],[0,1],[1,1],[0,1],[1,1],[0,0],[1,1],[0,0]]
-
 
     graphFloydWarshall = [
         [0, 8, 3, 1, math.inf],
@@ -470,8 +466,6 @@ def main():
 
     alignmentStrA = "name"
     alignmentStrB = "mean"
-
-    print(test.matrixScore(graphFlip))
 
     '''
     print2D(floydWarshall(teacherSampleGraph))
