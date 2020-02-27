@@ -7,6 +7,7 @@ import collections
 import concurrent.futures
 import threading
 import time
+import json
 import socket
 
 
@@ -426,57 +427,25 @@ def stringAlignment(strA, strB):
 
 
 def main():
-    strA = list("aabcc")
-    strB = list("dbbca")
-    strTarget = list("aadbbbaccc")
+    senderSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    port = 5001
+    ipPortTuple = ("192.168.0.11", 5000)
+    outputMsg = {"type": "TEST", "data": "TEST SENDING MSG!!!"}
 
-    prettyWords = ["call", "me", "ishmael.", "some", "years", "ago,", "never", "mind", "how", "long", "precisely,",
-                   "having", "little", "or", "no", "money", "in", "my", "purse,", "and", "nothing", "particular", "to",
-                   "interest", "me", "on", "shore,", "I", "thought", "I", "would", "sail", "about", "a", "little",
-                   "and", "see", "the", "watery", "part", "of", "the", "world."]
+    def getHostnameIP():
+        try:
+            return socket.gethostbyname(socket.gethostname())
+        except:
+            return None
 
-    d = [4, 10, 6, 3, 8, 5, 2, 1]
-    c = 1
-    k = 5
-    s = 10
+    try:
+        senderSocket.bind((getHostnameIP(), port))
+        print("sender is online, the IP and Port is: ", getHostnameIP(), ":", port)
+    except:
+        print("Error occurred. Server shutdown...")
+        return
 
-    graphFloydWarshall = [
-        [0, 8, 3, 1, math.inf],
-        [8, 0, 4, math.inf, 2],
-        [3, 4, 0, 1, 1],
-        [1, math.inf, 1, 0, 8],
-        [math.inf, 2, 1, 8, 0]
-    ]
-
-    graphBellmanFord = [
-        [0, math.inf, math.inf, math.inf, math.inf, math.inf],
-        [-3, 0, -4, math.inf, math.inf, math.inf],
-        [math.inf, math.inf, 0, math.inf, -1, -2],
-        [3, math.inf, 8, 0, math.inf, math.inf],
-        [4, 6, math.inf, math.inf, 0, math.inf],
-        [2, math.inf, math.inf, -3, math.inf, 0]
-    ]
-
-    teacherSampleGraph = [
-        [0, 3, math.inf, math.inf],
-        [math.inf, 0, 12, 5],
-        [math.inf, math.inf, 0, -1],
-        [2, -4, math.inf, 0]
-    ]
-
-    alignmentStrA = "name"
-    alignmentStrB = "mean"
-
-    '''
-    print2D(floydWarshall(teacherSampleGraph))
-    print(bellmanFord(graphBellmanFord, 1, 0))
-    print2D(stringAlignment(alignmentStrA, alignmentStrB))
-    print(quickSort(d, 0, len(d)))
-    print(buyingStrategy(d, c, k, s))
-    print(shuffleCheck_BF(strA, strB, strTarget))
-    print(shuffleCheck_DP(strA, strB, strTarget))
-    print2D(prettyPrint(prettyWords, 38))
-    '''
+    senderSocket.sendto(json.dumps(outputMsg).encode(), ipPortTuple)
 
 
 if __name__ == "__main__":
